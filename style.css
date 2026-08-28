@@ -416,13 +416,13 @@ footer {
   
   /* Masonry s'adapte sur mobile (2 puis 1 colonne) */
   .masonry-grid {
-    column-count: 2;
+    column-count: 3;
   }
 }
 
 @media (max-width: 500px) {
   .masonry-grid {
-    column-count: 1; /* 1 seule image par ligne sur tout petit écran */
+    column-count: 2; /* 1 seule image par ligne sur tout petit écran */
   }
 }
 
