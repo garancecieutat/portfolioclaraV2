@@ -532,3 +532,15 @@ footer {
   color: var(--text-color);
   line-height: 1.5;
 }
+
+/* --- ADAPTATIONS FINALES POUR MOBILE --- */
+@media (max-width: 768px) {
+  .resume-item {
+    flex-direction: column; /* Met la date au-dessus du texte sur mobile */
+    gap: 8px; /* Réduit l'espace entre la date et le titre */
+  }
+  
+  .resume-date {
+    flex: auto; /* Annule la largeur forcée de 140px de l'ordinateur */
+  }
+}
