@@ -150,6 +150,12 @@ h1, h2, h3 {
   padding: 0 20px;
 }
 
+.container-portfolio {
+  max-width: 1300px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
 .page-content {
   margin-top: 120px; 
 }
@@ -228,7 +234,7 @@ h1, h2, h3 {
 }
 
 .masonry-grid {
-  column-count: 3; /* 3 colonnes d'images */
+  column-count: 4; /* 3 colonnes d'images */
   column-gap: 20px; /* Espace entre les colonnes */
 }
 
