@@ -1,0 +1,528 @@
+@font-face {
+  font-family: 'behove';
+  src: url('fonts/Behove.ttf') format('opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Variables de couleurs Pastel */
+:root {
+  --bg-color: #fdfbf7;
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --primary-pink: #f7d6e0;
+  --accent-purple: #b8c0ff;
+  --accent-green: #d8f3dc;
+  --accent-blue: #e0f2fe;
+  --text-color: #4a4e69;
+  --text-dark: #22223b;
+  --card-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Header & Menu Nav Fille */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3 {
+  font-family: 'behove', cursive, sans-serif; 
+  font-weight: normal;
+}
+
+/* Menu */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+
+.logo-circle {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  background-color: var(--primary-pink);
+  overflow: hidden;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-circle img {
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: background-color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+  background-color: var(--primary-pink);
+}
+
+/* Submenu pour le Portfolio */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  min-width: 160px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  color: var(--text-dark);
+}
+
+/* Bannière d'accueil */
+.hero-banner {
+  height: 60vh;
+  background: linear-gradient(135deg, var(--primary-pink), var(--accent-purple));
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  margin-top: 70px;
+}
+
+.hero-text h1 {
+  font-size: 5rem;
+  color: var(--text-dark);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.6);
+}
+
+/* Structure générale */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.page-content {
+  margin-top: 120px; 
+}
+
+/* Page À Propos et Contact (INCHANGÉ) */
+.about-section {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.profile-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--accent-green);
+}
+
+.resume-section {
+  position: relative;
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+  margin-bottom: 30px;
+}
+
+.resume-section h2 {
+  color: var(--text-dark);
+  border-bottom: 3px solid var(--primary-pink);
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.contact-link {
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-image {
+  position: absolute;
+  width: 60px;
+  top: 0px;
+  right: -45px;
+}
+
+.cv-download {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.btn-download {
+  display: inline-block;
+  background-color: var(--primary-pink);
+  color: var(--text-dark);
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-download:hover {
+  background-color: var(--accent-purple);
+}
+
+/* NOUVEAU : Page Portfolio - Grille Masonry (Pinterest style) */
+.intro-box {
+  background-color: var(--accent-blue);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+}
+
+.masonry-grid {
+  column-count: 3; /* 3 colonnes d'images */
+  column-gap: 20px; /* Espace entre les colonnes */
+}
+
+.masonry-item {
+  break-inside: avoid; /* Empêche l'image d'être coupée entre deux colonnes */
+  margin-bottom: 20px; /* Espace en dessous de l'image */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.masonry-item:hover {
+  transform: scale(1.02); /* Petit zoom au survol */
+}
+
+.masonry-item img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+#lightbox {
+  display: none; 
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 85%;
+  max-height: 90vh;
+}
+
+#lightbox-img {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border: 15px solid white;
+  border-bottom: none; /* Relie l'image à la zone de texte */
+  background-color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.lightbox-info {
+  background-color: white;
+  width: 100%;
+  padding: 20px;
+  border-radius: 0 0 8px 8px;
+  text-align: center;
+  border-top: 2px solid #f0f0f0; /* Petite ligne discrète entre image et texte */
+}
+
+.lightbox-info h3 {
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.tag {
+  display: inline-block;
+  background-color: var(--primary-pink);
+  padding: 5px 12px;
+  font-size: 0.85rem;
+  border-radius: 20px;
+  margin: 0 5px;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+  z-index: 2010;
+}
+
+.close-lightbox:hover {
+  color: var(--primary-pink);
+}
+
+/* Footer et Logo défilant (INCHANGÉ) */
+footer {
+  background-color: var(--card-bg);
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  border-top: 1px solid #eee;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.social-links img {
+  width: 17px;
+  height: 17px;
+  vertical-align: middle;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--primary-pink);
+}
+
+.scroll-logo-container {
+  position: fixed;
+  bottom: 45px;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+#scroll-logo {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  left: 0;
+  transition: left 0.1s ease-out;
+}
+
+/* --- ADAPTATION POUR MOBILE ET TABLETTES --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .nav-links {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .hero-text h1 {
+    font-size: 3rem;
+  }
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-banner {
+    padding-left: 20px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 170px;
+  }
+  .page-content {
+    margin-top: 200px; 
+  }
+  .resume-section {
+    padding: 20px;
+    margin-right: 10px;
+  }
+  .contact-image {
+    width: 45px;
+    right: -30px;
+  }
+  
+  /* Masonry s'adapte sur mobile (2 puis 1 colonne) */
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .masonry-grid {
+    column-count: 1; /* 1 seule image par ligne sur tout petit écran */
+  }
+}
+
+/* --- Boutons Flèches pour la Lightbox --- */
+.lightbox-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+  z-index: 2010; /* Pour être sûr qu'ils soient au-dessus du reste */
+}
+
+.lightbox-btn:hover {
+  background-color: var(--primary-pink);
+  border-color: var(--primary-pink);
+}
+
+.prev-lightbox { left: 20px; }
+.next-lightbox { right: 20px; }
+
+/* Adaptation pour mobile (flèches plus visibles sur petit écran) */
+@media (max-width: 768px) {
+  .lightbox-btn {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: var(--text-dark);
+    border-color: var(--text-dark);
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .resume-item {
+    flex-direction: column; /* Met la date au-dessus du texte sur mobile */
+    gap: 8px;
+  }
+  .resume-date {
+    flex: auto;
+  }
+}
+
+/* =========================================
+   STYLE POUR LES EXPERIENCES ET FORMATIONS
+   ========================================= */
+.resume-item {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed var(--accent-purple); /* Petite ligne de séparation discrète */
+}
+
+.resume-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none; /* Enlève la ligne sous le dernier élément */
+}
+
+.resume-date {
+  flex: 0 0 140px; /* Fixe la largeur de la colonne de gauche pour aligner les dates */
+}
+
+.resume-date-badge {
+  display: inline-block;
+  background-color: var(--primary-pink);
+  color: var(--text-dark);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.resume-content {
+  flex: 1; /* Prend tout le reste de la place à droite */
+}
+
+.resume-content h3 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* J'enlève la police 'behove' ici pour que ce soit plus lisible */
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 3px;
+}
+
+.resume-location {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #777; /* Un gris discret pour le lieu */
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.resume-desc {
+  font-size: 0.95rem;
+  color: var(--text-color);
+  line-height: 1.5;
+}
