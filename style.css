@@ -476,18 +476,24 @@ footer {
     gap: 10px;
   }
 
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
   .logo-circle {
     width: 45px; 
     height: 45px;
   }
 
   .nav-name {
-    font-size: 1.4rem; 
-    text-align: center;
+    font-size: 1.3rem; 
   }
 
   .nav-links {
     margin: 0;
+    margin-left: 0;
     justify-content: center;
     gap: 5px; 
     flex-wrap: wrap;
