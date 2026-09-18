@@ -208,7 +208,7 @@ h1, h2, h3 {
   position: absolute;
   width: 100px;
   top: 90px;
-  right: -62px;
+  right: -59px;
 }
 
 .cv-download {
@@ -538,8 +538,9 @@ footer {
   }
   
   .contact-image {
-    width: 60px;
-    right: -30px;
+    width: 90px;
+    right: -52px;
+    top: 85px;
   }
   
   /* Masonry */
