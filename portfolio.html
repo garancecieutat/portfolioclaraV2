@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar">
+      <div class="nav-brand">
+        <div class="logo-circle">
+          <img src="img/logo.png" alt="Logo">
+        </div>
+        <h1 class="nav-name">Clara Sucilea</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">À propos</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="cv-contact.html">CV & Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container-portfolio page-content">
+    <section class="intro-box">
+      <h1>Portfolio</h1>
+    </section>
+
+    <section class="masonry-grid">
+      
+      <div class="masonry-item" data-title="Catalina - Affiche film fin d'etude" data-tags="Digital, Procreate/Illustrator (Titre), Affiche">
+        <img src="img/Dessin/Affiche.jpeg" alt="Catalina - Affiche film fin d'etude">
+      </div>
+
+      <div class="masonry-item" data-title="Alexandra - Film fin d'etude" data-tags="Digital, Photoshop/Procreate, Chara design">
+        <img src="img/Dessin/Alexandra.jpeg" alt="Alexandra - Film fin d'etude">
+      </div>
+
+      <div class="masonry-item" data-title="Cookies Cat" data-tags="Digital, Procreate, Illustration" data-images="img/Dessin/Cookies_cat_part1.jpeg, img/Dessin/Cookies_cat_part2.jpeg">
+        <img src="img/Dessin/Cookies_cat_part1.jpeg" alt="Cookies Cat">
+      </div>
+
+      <div class="masonry-item" data-title="The cozy home" data-tags="Digital, Photoshop, Illustration" data-images="img/Dessin/Cozy_home_part1.jpeg, img/Dessin/Cozy_home_part2.jpeg">
+        <img src="img/Dessin/Cozy_home_part1.jpeg" alt="The cozy home">
+      </div>
+
+      <div class="masonry-item" data-title="Illustration en applat" data-tags="Digital, Photoshop, Illustration">
+        <img src="img/Dessin/IllustrationApplat.jpeg" alt="Illustration en applat">
+      </div>
+
+      <div class="masonry-item" data-title="Jeanne - Film fin d'etude" data-tags="Digital, Photoshop/Procreate, Chara design">
+        <img src="img/Dessin/Jeanne.jpeg" alt="Jeanne - Film fin d'etude">
+      </div>
+
+      <div class="masonry-item" data-title="Petit lapin belier" data-tags="Digital, Procreate, Chara design">
+        <img src="img/Dessin/Lapin.jpeg" alt="Petit lapin belier">
+      </div>
+
+      <div class="masonry-item" data-title="The little girl in the snow" data-tags="Digital, Procreate, Chara design">
+        <img src="img/Dessin/little_girl_1.jpeg" alt="The little girl in the snow">
+      </div>
+
+      <div class="masonry-item" data-title="The little girl in the snow" data-tags="Digital, Procreate, Chara design">
+        <img src="img/Dessin/little_girl_2.jpeg" alt="The little girl in the snow">
+      </div>
+
+      <div class="masonry-item" data-title="The little girl in the snow" data-tags="Digital, Procreate, Chara design">
+        <img src="img/Dessin/little_girl_3.jpeg" alt="The little girl in the snow">
+      </div>
+
+      <div class="masonry-item" data-title="The little girl in the snow" data-tags="Digital, Procreate, Chara design">
+        <img src="img/Dessin/little_girl_4.jpeg" alt="The little girl in the snow">
+      </div>
+
+      <div class="masonry-item" data-title="NaNa - Peter Pan" data-tags="Digital, Procreate, Fan art">
+        <img src="img/Dessin/NaNa.jpeg" alt="NaNa - Peter Pan">
+      </div>
+
+      <div class="masonry-item" data-title="Illustration de Noel" data-tags="Digital, Procreate, Illustration">
+        <img src="img/Dessin/Noel.jpeg" alt="Illustration de Noel">
+      </div>
+      
+      <div class="masonry-item" data-title="On Love" data-tags="Digital, Procreate, Chara design">
+        <img src="img/Dessin/OnLove.jpeg" alt="On Love">
+      </div>
+
+      <div class="masonry-item" data-title="Polochon - La petite sirene" data-tags="Digital, Procreate, Fan art">
+        <img src="img/Dessin/Polochon.jpeg" alt="Polochon - La petite sirene">
+      </div>
+
+      <div class="masonry-item" data-title="A punkin love" data-tags="Digital, Procreate, Illustration">
+        <img src="img/Dessin/Pumkin.jpeg" alt="A punkin love">
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>Suivez-moi sur mes réseaux :</p>
+    <div class="social-links">
+      <a href="#"><img src="img/instagram.jpeg" alt="Logo Instagram" width="17px" height="17px"> Instagram</a>
+      <a href="https://www.linkedin.com/in/clara-sucilea-72500a3ab/"><img src="img/linkedin.png" alt="Logo LinkedIn" width="15px" height="15px"> LinkedIn</a>
+    </div>
+  </footer>
+
+  <div class="scroll-logo-container">
+    <img src="img/logo_mouvement_droite.png" id="scroll-logo" alt="Logo Animé">
+  </div>
+
+  <div id="lightbox">
+    <span class="close-lightbox" id="close-lightbox">&times;</span>
+
+    <button class="lightbox-btn prev-lightbox" id="prev-lb">◀</button>
+
+    <div class="lightbox-content-wrapper">
+      <img id="lightbox-img" src="" alt="Zoom">
+      <div class="lightbox-info">
+        <h3 id="lightbox-title">Titre</h3>
+        <div id="lightbox-tags"></div>
+      </div>
+    </div>
+    <button class="lightbox-btn next-lightbox" id="next-lb">▶</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
